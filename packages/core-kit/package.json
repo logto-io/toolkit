@@ -1,5 +1,5 @@
 {
-  "name": "@logto/shared",
+  "name": "@logto/core-kit",
   "version": "1.0.0-beta.10",
   "main": "lib/index.js",
   "author": "Silverhand Inc. <contact@silverhand.io>",

@@ -1,5 +1,5 @@
 {
-  "name": "@logto/connector-core",
+  "name": "@logto/connector-kit",
   "version": "1.0.0-beta.10",
   "main": "./lib/index.js",
   "exports": "./lib/index.js",
@@ -18,7 +18,7 @@
     "prepack": "pnpm build"
   },
   "dependencies": {
-    "@logto/shared": "^1.0.0-beta.10",
+    "@logto/core-kit": "^1.0.0-beta.10",
     "@silverhand/essentials": "^1.2.0",
     "zod": "^3.14.3"
   },

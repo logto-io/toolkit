@@ -1,4 +1,4 @@
-import type { LanguageKey } from '@logto/shared';
+import type { LanguageKey } from '@logto/core-kit';
 import { Nullable } from '@silverhand/essentials';
 import { z, ZodType } from 'zod';
 
