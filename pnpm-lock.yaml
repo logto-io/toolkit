@@ -59,7 +59,7 @@ importers:
       color: ^4.2.3
       eslint: ^8.21.0
       lint-staged: ^13.0.0
-      nanoid: ^3.1.23
+      nanoid: ^4.0.0
       postcss: ^8.4.6
       prettier: ^2.7.1
       stylelint: ^14.9.1
@@ -67,7 +67,7 @@ importers:
       zod: ^3.18.0
     dependencies:
       color: 4.2.3
-      nanoid: 3.3.4
+      nanoid: 4.0.0
       zod: 3.19.1
     devDependencies:
       '@silverhand/eslint-config': 1.0.0_kdsbbp2roa7vvztuimj3zjp37m
@@ -4772,6 +4772,13 @@ packages:
     resolution: {integrity: sha512-MqBkQh/OHTS2egovRtLk45wEyNXwF+cokD+1YPf9u5VfJiRdAiRwB2froX5Co9Rh20xs4siNPm8naNotSD6RBw==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
+    dev: true
+
+  /nanoid/4.0.0:
+    resolution: {integrity: sha512-IgBP8piMxe/gf73RTQx7hmnhwz0aaEXYakvqZyE302IXW3HyVNhdNGC+O2MwMAVhLEnvXlvKtGbtJf6wvHihCg==}
+    engines: {node: ^14 || ^16 || >=18}
+    hasBin: true
+    dev: false
 
   /natural-compare/1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}

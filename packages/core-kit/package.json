@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "color": "^4.2.3",
-    "nanoid": "^3.1.23",
+    "nanoid": "^4.0.0",
     "zod": "^3.18.0"
   },
   "devDependencies": {
