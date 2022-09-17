@@ -25,7 +25,7 @@ importers:
     specifiers:
       '@logto/core-kit': ^1.0.0-beta.11
       '@silverhand/eslint-config': 1.0.0
-      '@silverhand/essentials': ^1.2.0
+      '@silverhand/essentials': ^1.2.1
       '@silverhand/ts-config': 1.0.0
       '@types/node': ^16.3.1
       eslint: ^8.21.0
@@ -35,7 +35,7 @@ importers:
       zod: ^3.14.3
     dependencies:
       '@logto/core-kit': link:../core-kit
-      '@silverhand/essentials': 1.2.0
+      '@silverhand/essentials': 1.2.1
       zod: 3.19.1
     devDependencies:
       '@silverhand/eslint-config': 1.0.0_kdsbbp2roa7vvztuimj3zjp37m
@@ -50,9 +50,8 @@ importers:
     specifiers:
       '@silverhand/eslint-config': 1.0.0
       '@silverhand/eslint-config-react': 1.0.0
-      '@silverhand/essentials': ^1.2.0
+      '@silverhand/essentials': ^1.2.1
       '@silverhand/ts-config': 1.0.0
-      '@silverhand/ts-config-react': 1.0.0
       '@types/color': ^3.0.3
       '@types/node': ^16.3.1
       '@types/react': ^18.0.20
@@ -72,9 +71,8 @@ importers:
     devDependencies:
       '@silverhand/eslint-config': 1.0.0_kdsbbp2roa7vvztuimj3zjp37m
       '@silverhand/eslint-config-react': 1.0.0_cz6mpnhchpvusz5auh7wueawau
-      '@silverhand/essentials': 1.2.0
+      '@silverhand/essentials': 1.2.1
       '@silverhand/ts-config': 1.0.0_typescript@4.8.3
-      '@silverhand/ts-config-react': 1.0.0_typescript@4.8.3
       '@types/color': 3.0.3
       '@types/node': 16.11.59
       '@types/react': 18.0.20
@@ -1445,22 +1443,12 @@ packages:
       lodash: 4.17.21
     dev: true
 
-  /@silverhand/essentials/1.2.0:
-    resolution: {integrity: sha512-AEkWX0667febPV4wTjGbM8wIKWCnJqlXSLXUTaVRdQJmuc87WGbjP7WTPn6tJ8o9cb5i4LpYTIE3ptz90nRvCg==}
+  /@silverhand/essentials/1.2.1:
+    resolution: {integrity: sha512-4wOM/yYEbcDH6Nwv/PdPjH+kbw8ixqGGVpD+CaWf+ay8+fYtmdNnr5aheqBwLV1ipHAjpXoh9x6Bqm9x68bGfA==}
     engines: {node: '>=14.15.0', pnpm: '>=6'}
     dependencies:
       lodash.orderby: 4.6.0
       lodash.pick: 4.4.0
-
-  /@silverhand/ts-config-react/1.0.0_typescript@4.8.3:
-    resolution: {integrity: sha512-Jto2iq5sM0/0f4X9T6nl8AvU2cl1A37aoGzLM3EU3P1LOATpbqnTHeoAra1ZyDcQBoYHyr4pRAvHACjWKQynlg==}
-    engines: {node: ^16.0.0 || ^18.0.0}
-    peerDependencies:
-      typescript: ^4.7.4
-    dependencies:
-      '@silverhand/ts-config': 1.0.0_typescript@4.8.3
-      typescript: 4.8.3
-    dev: true
 
   /@silverhand/ts-config/1.0.0_typescript@4.8.3:
     resolution: {integrity: sha512-XKBqfHAcb77xZmGFXW+f/NZvalhRjxhm0au5hLxtRbzDPYHWlNn/n6c7xula5tcUbyaLS41K3M05KcKBq9I+eg==}
