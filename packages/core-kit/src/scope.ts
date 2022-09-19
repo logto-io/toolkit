@@ -1,4 +1,4 @@
-export enum PreservedScope {
+export enum ReservedScope {
   OpenId = 'openid',
   OfflineAccess = 'offline_access',
 }
