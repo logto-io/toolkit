@@ -60,8 +60,8 @@ jobs:
           flags: core
           directory: ./packages/core
 
-      - name: Codecov ui
+      - name: Codecov connector
         uses: codecov/codecov-action@v3
         with:
-          flags: ui
-          directory: ./packages/ui
+          flags: connector
+          directory: ./packages/connector

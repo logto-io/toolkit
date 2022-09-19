@@ -10,6 +10,7 @@
     "prepare": "if test \"$NODE_ENV\" != \"production\" && test \"$CI\" != \"true\" ; then husky install ; fi",
     "prepack": "lerna run --stream prepack",
     "dev": "lerna run --stream prepack -- --incremental && lerna run --parallel dev",
+    "test": "lerna run --parallel test",
     "ci:build": "lerna run --stream build",
     "ci:lint": "lerna run --parallel lint",
     "ci:test": "lerna run --parallel test:coverage"
