@@ -1,8 +1,8 @@
 import { z } from 'zod';
 
-import { fallback } from './utilities/zod';
+import { languageKeys } from '@/language/key';
+import { fallback } from '@/utilities';
 
-export const languageKeys = ['en', 'fr', 'pt-PT', 'zh-CN', 'tr-TR', 'ko-KR'] as const;
 export const languageKeyGuard = z.enum(languageKeys);
 export type LanguageKey = z.infer<typeof languageKeyGuard>;
 
