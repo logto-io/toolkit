@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@logto/core-kit": "^1.0.0-beta.14",
+    "@logto/language-kit": "^1.0.0-beta.14",
     "@silverhand/essentials": "^1.2.1",
     "zod": "^3.14.3"
   },

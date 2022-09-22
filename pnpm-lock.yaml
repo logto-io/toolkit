@@ -24,6 +24,7 @@ importers:
   packages/connector-kit:
     specifiers:
       '@logto/core-kit': ^1.0.0-beta.14
+      '@logto/language-kit': ^1.0.0-beta.14
       '@silverhand/eslint-config': 1.0.0
       '@silverhand/essentials': ^1.2.1
       '@silverhand/ts-config': 1.0.0
@@ -35,6 +36,7 @@ importers:
       zod: ^3.14.3
     dependencies:
       '@logto/core-kit': link:../core-kit
+      '@logto/language-kit': link:../language-kit
       '@silverhand/essentials': 1.2.1
       zod: 3.19.1
     devDependencies:
