@@ -51,6 +51,7 @@ importers:
   packages/core-kit:
     specifiers:
       '@jest/types': ^29.0.3
+      '@logto/language-kit': ^1.0.0-beta.14
       '@silverhand/eslint-config': 1.0.0
       '@silverhand/eslint-config-react': 1.0.0
       '@silverhand/essentials': ^1.2.1
@@ -72,6 +73,7 @@ importers:
       typescript: ^4.7.4
       zod: ^3.18.0
     dependencies:
+      '@logto/language-kit': link:../language-kit
       color: 4.2.3
       nanoid: 3.3.4
       zod: 3.19.1

@@ -1,11 +1,6 @@
-import { z } from 'zod';
+import { LanguageTag, languageTagGuard } from '@logto/language-kit';
 
-import { fallback } from './utilities/zod';
+import { fallback } from '@/utilities';
 
-export const languageKeys = ['en', 'fr', 'pt-PT', 'zh-CN', 'tr-TR', 'ko-KR'] as const;
-export const languageKeyGuard = z.enum(languageKeys);
-export type LanguageKey = z.infer<typeof languageKeyGuard>;
-
-export const getDefaultLanguage = (language: string): LanguageKey => {
-  return languageKeyGuard.or(fallback<LanguageKey>('en')).parse(language);
-};
+export const getDefaultLanguage = (language: string): LanguageTag =>
+  languageTagGuard.or(fallback<LanguageTag>('en')).parse(language);
