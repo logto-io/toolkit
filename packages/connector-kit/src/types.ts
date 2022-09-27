@@ -1,4 +1,4 @@
-import type { LanguageKey } from '@logto/core-kit';
+import { LanguageTag } from '@logto/language-kit';
 import { Nullable } from '@silverhand/essentials';
 import { z, ZodType } from 'zod';
 
@@ -16,7 +16,7 @@ export enum ConnectorPlatform {
 }
 
 type I18nPhrases = { en: string } & {
-  [K in Exclude<LanguageKey, 'en'>]?: string;
+  [K in Exclude<LanguageTag, 'en'>]?: string;
 };
 
 export enum ConnectorErrorCodes {
