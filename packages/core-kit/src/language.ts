@@ -1,7 +1,7 @@
 import { LanguageTag, languageTagGuard } from '@logto/language-kit';
 import { z } from 'zod';
 
-import { fallback } from '@/utilities';
+import { fallback } from './utilities';
 
 export const getDefaultLanguageTag = (language: string): LanguageTag =>
   languageTagGuard.or(fallback<LanguageTag>('en')).parse(language);
