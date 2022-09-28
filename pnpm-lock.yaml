@@ -23,8 +23,8 @@ importers:
 
   packages/connector-kit:
     specifiers:
-      '@logto/core-kit': ^1.0.0-beta.15
-      '@logto/language-kit': ^1.0.0-beta.15
+      '@logto/core-kit': ^1.0.0-beta.16
+      '@logto/language-kit': ^1.0.0-beta.16
       '@silverhand/eslint-config': 1.0.0
       '@silverhand/essentials': ^1.2.1
       '@silverhand/ts-config': 1.0.0
@@ -51,7 +51,7 @@ importers:
   packages/core-kit:
     specifiers:
       '@jest/types': ^29.0.3
-      '@logto/language-kit': ^1.0.0-beta.15
+      '@logto/language-kit': ^1.0.0-beta.16
       '@silverhand/eslint-config': 1.0.0
       '@silverhand/eslint-config-react': 1.0.0
       '@silverhand/essentials': ^1.2.1
