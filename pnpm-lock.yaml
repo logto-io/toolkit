@@ -23,7 +23,7 @@ importers:
 
   packages/connector-kit:
     specifiers:
-      '@logto/core-kit': ^1.0.0-beta.17
+      '@logto/core-kit': ^1.0.0-beta.18
       '@logto/language-kit': ^1.0.0-beta.16
       '@silverhand/eslint-config': 1.0.0
       '@silverhand/essentials': ^1.2.1

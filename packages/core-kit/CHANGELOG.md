@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.0-beta.18](https://github.com/logto-io/toolkit/compare/v1.0.0-beta.17...v1.0.0-beta.18) (2022-10-12)
+
+
+### Bug Fixes
+
+* export url utilities in index file ([#23](https://github.com/logto-io/toolkit/issues/23)) ([0a7b4c8](https://github.com/logto-io/toolkit/commit/0a7b4c836fe6d566fc051fcf185df4dac352e308))
+
+
+
 ## [1.0.0-beta.17](https://github.com/logto-io/toolkit/compare/v1.0.0-beta.16...v1.0.0-beta.17) (2022-10-12)
 
 **Note:** Version bump only for package @logto/core-kit
