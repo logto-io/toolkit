@@ -13,6 +13,7 @@
     "test": "lerna run --parallel test",
     "ci:build": "lerna run --stream build",
     "ci:lint": "lerna run --parallel lint",
+    "ci:stylelint": "lerna run --parallel stylelint",
     "ci:test": "lerna run --parallel test:coverage"
   },
   "devDependencies": {
