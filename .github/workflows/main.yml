@@ -39,6 +39,9 @@ jobs:
       - name: Lint
         run: pnpm ci:lint
 
+      - name: Stylelint
+        run: pnpm ci:stylelint
+
   main-test:
     runs-on: ubuntu-latest
 
