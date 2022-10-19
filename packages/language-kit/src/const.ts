@@ -50,7 +50,7 @@ export const languages = Object.freeze({
   'is-IS': 'Íslenska',
   'it-IT': 'Italiano',
   'iu-CA': 'Inuktitut',
-  'ja-JP': '日本語',
+  ja: '日本語',
   'ja-KS': '日本語(関西)',
   'jv-ID': 'Basa Jawa',
   'ka-GE': 'ქართული',
