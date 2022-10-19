@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.0-beta.19](https://github.com/logto-io/toolkit/compare/v1.0.0-beta.18...v1.0.0-beta.19) (2022-10-19)
+
+
+### Bug Fixes
+
+* language tag `jp` ([#28](https://github.com/logto-io/toolkit/issues/28)) ([0f5f6e6](https://github.com/logto-io/toolkit/commit/0f5f6e6a2cd9553e1a78aa7473f56e7631c2efc4))
+
+
+
 ## [1.0.0-beta.18](https://github.com/logto-io/toolkit/compare/v1.0.0-beta.17...v1.0.0-beta.18) (2022-10-12)
 
 
