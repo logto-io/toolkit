@@ -1,3 +1,4 @@
+import { isLanguageTag, LanguageTag } from '@logto/language-kit';
 import { ZodType } from 'zod';
 
 import { ConnectorError, ConnectorErrorCodes } from './types';
@@ -24,3 +25,9 @@ export const parseJson = (
     throw new ConnectorError(errorCode, errorPayload ?? jsonString);
   }
 };
+
+// TODO: LOG-4446 change connector `ko-KR` to `ko`
+const connectorSupportedLanguageTags = new Set(['en', 'fr', 'pt-PT', 'zh-CN', 'tr-TR', 'ko-KR']);
+
+export const getConnectorSupportedLanguageTag = (language: string): LanguageTag =>
+  isLanguageTag(language) && connectorSupportedLanguageTags.has(language) ? language : 'en';
