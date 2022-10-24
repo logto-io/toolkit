@@ -1,6 +1,7 @@
-import { LanguageTag } from '@logto/language-kit';
-import { Nullable } from '@silverhand/essentials';
-import { z, ZodType } from 'zod';
+import type { LanguageTag } from '@logto/language-kit';
+import type { Nullable } from '@silverhand/essentials';
+import type { ZodType } from 'zod';
+import { z } from 'zod';
 
 // MARK: Foundation
 export enum ConnectorType {
