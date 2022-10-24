@@ -1,4 +1,4 @@
-import { ZodType } from 'zod';
+import type { ZodType } from 'zod';
 
 import { ConnectorError, ConnectorErrorCodes } from './types';
 

@@ -1,4 +1,5 @@
-import { LanguageTag, languageTagGuard } from '@logto/language-kit';
+import type { LanguageTag } from '@logto/language-kit';
+import { languageTagGuard } from '@logto/language-kit';
 import { z } from 'zod';
 
 import { fallback } from './utilities';

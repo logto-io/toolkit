@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
 import { languages } from './const';
-import { LanguageTag } from './type';
+import type { LanguageTag } from './type';
 
 export const isLanguageTag = (value: unknown): value is LanguageTag =>
   typeof value === 'string' && value in languages;
