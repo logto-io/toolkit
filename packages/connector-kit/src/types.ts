@@ -85,7 +85,7 @@ const connectorMetadataGuard = z.object({
   logo: z.string(),
   logoDark: z.string().nullable(),
   description: i18nPhrasesGuard,
-  isTemplate: z.boolean().optional().default(false),
+  isStandard: z.boolean().optional().default(false),
   readme: z.string(),
   configTemplate: z.string(),
 });
