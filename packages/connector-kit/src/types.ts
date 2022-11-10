@@ -1,5 +1,5 @@
 import type { LanguageTag } from '@logto/language-kit';
-import type { Nullable } from '@silverhand/essentials';
+import { isLanguageTag } from '@logto/language-kit';
 import type { ZodType } from 'zod';
 import { z } from 'zod';
 
@@ -15,6 +15,25 @@ export enum ConnectorPlatform {
   Universal = 'Universal',
   Web = 'Web',
 }
+
+const i18nPhrasesGuard: ZodType<I18nPhrases> = z
+  .object({ en: z.string() })
+  .and(z.record(z.string()))
+  .refine((i18nObject) => {
+    const keys = Object.keys(i18nObject);
+
+    if (!('en' in keys)) {
+      return false;
+    }
+
+    for (const value of keys) {
+      if (!isLanguageTag(value)) {
+        return false;
+      }
+    }
+
+    return true;
+  });
 
 type I18nPhrases = { en: string } & {
   [K in Exclude<LanguageTag, 'en'>]?: string;
@@ -58,17 +77,48 @@ export enum MessageTypes {
 
 export const messageTypesGuard = z.nativeEnum(MessageTypes);
 
-export type ConnectorMetadata = {
-  id: string;
-  target: string;
-  platform: Nullable<ConnectorPlatform>;
-  name: I18nPhrases;
-  logo: string;
-  logoDark: Nullable<string>;
-  description: I18nPhrases;
-  readme: string;
-  configTemplate: string;
-};
+export const fullConnectorMetadataGuard = z.object({
+  id: z.string(),
+  target: z.string(),
+  platform: z.nativeEnum(ConnectorPlatform).nullable(),
+  name: i18nPhrasesGuard,
+  logo: z.string(),
+  logoDark: z.string().nullable(),
+  description: i18nPhrasesGuard,
+  isTemplate: z.boolean().optional().default(false),
+  readme: z.string(),
+  configTemplate: z.string(),
+});
+
+export type FullConnectorMetadata = z.infer<typeof fullConnectorMetadataGuard>;
+
+// Can not use ZodObject.required() to specify what attributes are required, which conflicts with Zod documents, use following workaround.
+const fixedConnectorMetadataGuard = fullConnectorMetadataGuard.pick({
+  id: true,
+  target: true,
+  platform: true,
+  name: true,
+  description: true,
+  isTemplate: true,
+  readme: true,
+  configTemplate: true,
+});
+
+const configurableConnectorMetadataGuard = fullConnectorMetadataGuard
+  .pick({
+    target: true,
+    logo: true,
+    logoDark: true,
+  })
+  .partial();
+
+export const connectorMetadataGuard = fixedConnectorMetadataGuard.and(
+  configurableConnectorMetadataGuard
+);
+
+export type ConnectorMetadata = z.input<typeof connectorMetadataGuard>;
+
+export type ConfigurableConnectorMetadata = z.infer<typeof configurableConnectorMetadataGuard>;
 
 export type BaseConnector<Type extends ConnectorType> = {
   type: Type;
