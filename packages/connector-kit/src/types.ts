@@ -77,7 +77,7 @@ export enum MessageTypes {
 
 export const messageTypesGuard = z.nativeEnum(MessageTypes);
 
-export const fullConnectorMetadataGuard = z.object({
+const connectorMetadataGuard = z.object({
   id: z.string(),
   target: z.string(),
   platform: z.nativeEnum(ConnectorPlatform).nullable(),
@@ -90,31 +90,13 @@ export const fullConnectorMetadataGuard = z.object({
   configTemplate: z.string(),
 });
 
-export type FullConnectorMetadata = z.infer<typeof fullConnectorMetadataGuard>;
-
-// Can not use ZodObject.required() to specify what attributes are required, which conflicts with Zod documents, use following workaround.
-export const fixedConnectorMetadataGuard = fullConnectorMetadataGuard.pick({
-  id: true,
-  target: true,
-  platform: true,
-  name: true,
-  description: true,
-  isTemplate: true,
-  readme: true,
-  configTemplate: true,
-});
-
-export const configurableConnectorMetadataGuard = fullConnectorMetadataGuard
+export const configurableConnectorMetadataGuard = connectorMetadataGuard
   .pick({
     target: true,
     logo: true,
     logoDark: true,
   })
   .partial();
-
-export const connectorMetadataGuard = fixedConnectorMetadataGuard.and(
-  configurableConnectorMetadataGuard
-);
 
 export type ConnectorMetadata = z.input<typeof connectorMetadataGuard>;
 
