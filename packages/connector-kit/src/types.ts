@@ -85,7 +85,7 @@ const connectorMetadataGuard = z.object({
   logo: z.string(),
   logoDark: z.string().nullable(),
   description: i18nPhrasesGuard,
-  isStandard: z.boolean().optional().default(false),
+  isStandard: z.boolean().optional(),
   readme: z.string(),
   configTemplate: z.string(),
 });
@@ -98,7 +98,7 @@ export const configurableConnectorMetadataGuard = connectorMetadataGuard
   })
   .partial();
 
-export type ConnectorMetadata = z.input<typeof connectorMetadataGuard>;
+export type ConnectorMetadata = z.infer<typeof connectorMetadataGuard>;
 
 export type ConfigurableConnectorMetadata = z.infer<typeof configurableConnectorMetadataGuard>;
 
