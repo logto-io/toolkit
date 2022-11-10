@@ -16,7 +16,7 @@ export enum ConnectorPlatform {
   Web = 'Web',
 }
 
-const i18nPhrasesGuard: ZodType<I18nPhrases> = z
+export const i18nPhrasesGuard: ZodType<I18nPhrases> = z
   .object({ en: z.string() })
   .and(z.record(z.string()))
   .refine((i18nObject) => {
@@ -77,7 +77,7 @@ export enum MessageTypes {
 
 export const messageTypesGuard = z.nativeEnum(MessageTypes);
 
-export const fullConnectorMetadataGuard = z.object({
+export const connectorMetadataGuard = z.object({
   id: z.string(),
   target: z.string(),
   platform: z.nativeEnum(ConnectorPlatform).nullable(),
@@ -90,10 +90,10 @@ export const fullConnectorMetadataGuard = z.object({
   configTemplate: z.string(),
 });
 
-export type FullConnectorMetadata = z.infer<typeof fullConnectorMetadataGuard>;
+export type ConnectorMetadata = z.infer<typeof connectorMetadataGuard>;
 
 // Can not use ZodObject.required() to specify what attributes are required, which conflicts with Zod documents, use following workaround.
-const fixedConnectorMetadataGuard = fullConnectorMetadataGuard.pick({
+export const fixedConnectorMetadataGuard = connectorMetadataGuard.pick({
   id: true,
   target: true,
   platform: true,
@@ -104,7 +104,7 @@ const fixedConnectorMetadataGuard = fullConnectorMetadataGuard.pick({
   configTemplate: true,
 });
 
-const configurableConnectorMetadataGuard = fullConnectorMetadataGuard
+export const configurableConnectorMetadataGuard = connectorMetadataGuard
   .pick({
     target: true,
     logo: true,
@@ -112,11 +112,11 @@ const configurableConnectorMetadataGuard = fullConnectorMetadataGuard
   })
   .partial();
 
-export const connectorMetadataGuard = fixedConnectorMetadataGuard.and(
+export const builtInConnectorMetadataGuard = fixedConnectorMetadataGuard.and(
   configurableConnectorMetadataGuard
 );
 
-export type ConnectorMetadata = z.input<typeof connectorMetadataGuard>;
+export type BuiltInConnectorMetadataGuard = z.input<typeof builtInConnectorMetadataGuard>;
 
 export type ConfigurableConnectorMetadata = z.infer<typeof configurableConnectorMetadataGuard>;
 
