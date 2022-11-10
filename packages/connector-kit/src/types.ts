@@ -1,5 +1,5 @@
 import type { LanguageTag } from '@logto/language-kit';
-import type { Nullable } from '@silverhand/essentials';
+import { isLanguageTag } from '@logto/language-kit';
 import type { ZodType } from 'zod';
 import { z } from 'zod';
 
@@ -15,6 +15,25 @@ export enum ConnectorPlatform {
   Universal = 'Universal',
   Web = 'Web',
 }
+
+export const i18nPhrasesGuard: ZodType<I18nPhrases> = z
+  .object({ en: z.string() })
+  .and(z.record(z.string()))
+  .refine((i18nObject) => {
+    const keys = Object.keys(i18nObject);
+
+    if (!('en' in keys)) {
+      return false;
+    }
+
+    for (const value of keys) {
+      if (!isLanguageTag(value)) {
+        return false;
+      }
+    }
+
+    return true;
+  });
 
 type I18nPhrases = { en: string } & {
   [K in Exclude<LanguageTag, 'en'>]?: string;
@@ -58,17 +77,30 @@ export enum MessageTypes {
 
 export const messageTypesGuard = z.nativeEnum(MessageTypes);
 
-export type ConnectorMetadata = {
-  id: string;
-  target: string;
-  platform: Nullable<ConnectorPlatform>;
-  name: I18nPhrases;
-  logo: string;
-  logoDark: Nullable<string>;
-  description: I18nPhrases;
-  readme: string;
-  configTemplate: string;
-};
+const connectorMetadataGuard = z.object({
+  id: z.string(),
+  target: z.string(),
+  platform: z.nativeEnum(ConnectorPlatform).nullable(),
+  name: i18nPhrasesGuard,
+  logo: z.string(),
+  logoDark: z.string().nullable(),
+  description: i18nPhrasesGuard,
+  isStandard: z.boolean().optional(),
+  readme: z.string(),
+  configTemplate: z.string(),
+});
+
+export const configurableConnectorMetadataGuard = connectorMetadataGuard
+  .pick({
+    target: true,
+    logo: true,
+    logoDark: true,
+  })
+  .partial();
+
+export type ConnectorMetadata = z.infer<typeof connectorMetadataGuard>;
+
+export type ConfigurableConnectorMetadata = z.infer<typeof configurableConnectorMetadataGuard>;
 
 export type BaseConnector<Type extends ConnectorType> = {
   type: Type;
