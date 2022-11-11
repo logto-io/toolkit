@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.0-beta.21](https://github.com/logto-io/toolkit/compare/v1.0.0-beta.20...v1.0.0-beta.21) (2022-11-11)
+
+
+### Features
+
+* update connector metadata types and add corresponding type guards ([#35](https://github.com/logto-io/toolkit/issues/35)) ([4e7cd12](https://github.com/logto-io/toolkit/commit/4e7cd12b4b4fb32f2ed5a7d66e1616e20fa395f1))
+
+
+
 ## [1.0.0-beta.20](https://github.com/logto-io/toolkit/compare/v1.0.0-beta.19...v1.0.0-beta.20) (2022-10-21)
 
 **Note:** Version bump only for package root
