@@ -93,6 +93,7 @@ const connectorMetadataGuard = z.object({
 export const configurableConnectorMetadataGuard = connectorMetadataGuard
   .pick({
     target: true,
+    name: true,
     logo: true,
     logoDark: true,
   })
