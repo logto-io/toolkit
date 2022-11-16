@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.0-beta.22](https://github.com/logto-io/toolkit/compare/v1.0.0-beta.21...v1.0.0-beta.22) (2022-11-16)
+
+
+### Bug Fixes
+
+* make standard connectors display name configurable ([#36](https://github.com/logto-io/toolkit/issues/36)) ([da431bf](https://github.com/logto-io/toolkit/commit/da431bf318a83e0086070d49a16a8cc3d970f388))
+
+
+
 ## [1.0.0-beta.21](https://github.com/logto-io/toolkit/compare/v1.0.0-beta.20...v1.0.0-beta.21) (2022-11-11)
 
 
