@@ -22,7 +22,7 @@ export const i18nPhrasesGuard: ZodType<I18nPhrases> = z
   .refine((i18nObject) => {
     const keys = Object.keys(i18nObject);
 
-    if (!('en' in keys)) {
+    if (!keys.includes('en')) {
       return false;
     }
 
