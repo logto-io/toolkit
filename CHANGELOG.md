@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.0-beta.23](https://github.com/logto-io/toolkit/compare/v1.0.0-beta.22...v1.0.0-beta.23) (2022-11-18)
+
+
+### Bug Fixes
+
+* hot fix the check on whether an element exists in array ([#37](https://github.com/logto-io/toolkit/issues/37)) ([889a577](https://github.com/logto-io/toolkit/commit/889a5773b5e95c35c4ef17db24622e7b87b723c5))
+
+
+
 ## [1.0.0-beta.22](https://github.com/logto-io/toolkit/compare/v1.0.0-beta.21...v1.0.0-beta.22) (2022-11-16)
 
 
