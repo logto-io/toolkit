@@ -1,8 +1,8 @@
 import type { ZodType } from 'zod';
 
-import { ConnectorError, ConnectorErrorCodes } from './types';
+import { ConnectorError, ConnectorErrorCodes } from './types.js';
 
-export * from './types';
+export * from './types.js';
 
 export function validateConfig<T>(config: unknown, guard: ZodType): asserts config is T {
   const result = guard.safeParse(config);

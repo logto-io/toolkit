@@ -2,7 +2,9 @@
   "extends": "@silverhand/ts-config/tsconfig.base",
   "compilerOptions": {
     "outDir": "lib",
-    "baseUrl": "."
+    "baseUrl": ".",
+    "moduleResolution": "nodenext",
+    "module": "es2022"
   },
   "include": ["src", "declaration", "jest.config.ts"]
 }
