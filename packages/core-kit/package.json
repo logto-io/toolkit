@@ -1,6 +1,6 @@
 {
   "name": "@logto/core-kit",
-  "version": "1.0.0-beta.21",
+  "version": "1.0.0-beta.24",
   "main": "lib/index.js",
   "author": "Silverhand Inc. <contact@silverhand.io>",
   "homepage": "https://github.com/logto-io/toolkit#readme",
@@ -33,7 +33,7 @@
     "zod": "^3.19.1"
   },
   "dependencies": {
-    "@logto/language-kit": "^1.0.0-beta.21",
+    "@logto/language-kit": "^1.0.0-beta.24",
     "color": "^4.2.3",
     "nanoid": "^3.1.23"
   },

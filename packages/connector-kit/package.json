@@ -1,6 +1,6 @@
 {
   "name": "@logto/connector-kit",
-  "version": "1.0.0-beta.23",
+  "version": "1.0.0-beta.24",
   "main": "./lib/index.js",
   "exports": "./lib/index.js",
   "typings": "./lib/index.d.ts",
@@ -27,8 +27,8 @@
     "zod": "^3.19.1"
   },
   "dependencies": {
-    "@logto/core-kit": "^1.0.0-beta.21",
-    "@logto/language-kit": "^1.0.0-beta.21",
+    "@logto/core-kit": "^1.0.0-beta.24",
+    "@logto/language-kit": "^1.0.0-beta.24",
     "@silverhand/essentials": "^1.2.1"
   },
   "devDependencies": {
