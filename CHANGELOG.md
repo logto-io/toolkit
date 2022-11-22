@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.0-beta.25](https://github.com/logto-io/toolkit/compare/v1.0.0-beta.24...v1.0.0-beta.25) (2022-11-22)
+
+
+### Bug Fixes
+
+* **core:** declarations ([#39](https://github.com/logto-io/toolkit/issues/39)) ([3140fdb](https://github.com/logto-io/toolkit/commit/3140fdbcc2db76bb76b4a5f5a5070de0dc12ff40))
+
+
+
 ## [1.0.0-beta.24](https://github.com/logto-io/toolkit/compare/v1.0.0-beta.23...v1.0.0-beta.24) (2022-11-22)
 
 **Note:** Version bump only for package root
