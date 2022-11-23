@@ -1,3 +1,3 @@
-export * from './const.js';
-export * from './type.js';
-export * from './utility.js';
+export * from './const';
+export * from './type';
+export * from './utility';
