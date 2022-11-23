@@ -1,4 +1,4 @@
-import { isLanguageTag, languageTagGuard } from './utility.js';
+import { isLanguageTag, languageTagGuard } from './utility';
 
 describe('isLanguageTag', () => {
   it('should pass when input is a valid language key', () => {

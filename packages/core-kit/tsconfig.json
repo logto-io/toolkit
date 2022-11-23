@@ -3,8 +3,8 @@
   "compilerOptions": {
     "outDir": "lib",
     "baseUrl": ".",
-    "moduleResolution": "nodenext",
-    "module": "es2022"
+    "moduleResolution": "node",
+    "module": "commonjs"
   },
   "include": ["src", "declaration", "jest.config.ts"]
 }

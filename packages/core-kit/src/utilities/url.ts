@@ -1,4 +1,4 @@
-import { mobileUriSchemeProtocolRegEx, webRedirectUriProtocolRegEx } from '../regex.js';
+import { mobileUriSchemeProtocolRegEx, webRedirectUriProtocolRegEx } from '../regex';
 
 export const validateRedirectUrl = (url: string, type: 'web' | 'mobile') => {
   try {

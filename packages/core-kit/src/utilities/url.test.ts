@@ -1,4 +1,4 @@
-import { validateRedirectUrl } from './url.js';
+import { validateRedirectUrl } from './url';
 
 describe('url utilities', () => {
   it('should allow valid redirect URIs', () => {

@@ -1,17 +1,18 @@
 {
   "name": "@logto/connector-kit",
   "version": "1.0.0-beta.25",
-  "main": "./lib/index.js",
-  "exports": "./lib/index.js",
-  "typings": "./lib/index.d.ts",
   "author": "Silverhand Inc. <contact@silverhand.io>",
   "homepage": "https://github.com/logto-io/toolkit#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/logto-io/toolkit.git"
   },
-  "license": "MIT",
-  "type": "module",
+  "source": "./src/index.ts",
+  "main": "./lib/index.js",
+  "exports": {
+    "require": "./lib/index.js"
+  },
+  "types": "./lib/index.d.ts",
   "files": [
     "lib"
   ],
@@ -27,8 +28,8 @@
     "zod": "^3.19.1"
   },
   "dependencies": {
-    "@logto/core-kit": "^1.0.0-beta.25",
-    "@logto/language-kit": "^1.0.0-beta.24",
+    "@logto/core-kit": "1.0.0-beta.25",
+    "@logto/language-kit": "1.0.0-beta.24",
     "@silverhand/essentials": "^1.2.1"
   },
   "devDependencies": {

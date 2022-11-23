@@ -1,4 +1,4 @@
-import { generateRandomString } from './string.js';
+import { generateRandomString } from './string';
 
 describe('generateRandomString', () => {
   it('should return a random string with specified length', () => {
