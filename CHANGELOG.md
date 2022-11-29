@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.0-beta.27](https://github.com/logto-io/toolkit/compare/v1.0.0-beta.26...v1.0.0-beta.27) (2022-11-29)
+
+
+### Features
+
+* **connector:** add continue message type ([#41](https://github.com/logto-io/toolkit/issues/41)) ([78f1eb0](https://github.com/logto-io/toolkit/commit/78f1eb06f84de2bc7601016a6bcc3c85eb4695f0))
+
+
+
 ## [1.0.0-beta.26](https://github.com/logto-io/toolkit/compare/v1.0.0-beta.25...v1.0.0-beta.26) (2022-11-23)
 
 **Note:** Version bump only for package root
