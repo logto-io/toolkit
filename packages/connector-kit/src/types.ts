@@ -72,6 +72,7 @@ export enum MessageTypes {
   SignIn = 'SignIn',
   Register = 'Register',
   ForgotPassword = 'ForgotPassword',
+  Continue = 'Continue',
   Test = 'Test',
 }
 
