@@ -1,6 +1,6 @@
 import { number, ZodError } from 'zod';
 
-import { fallback } from './zod';
+import { fallback } from './zod.js';
 
 describe('fallback', () => {
   it('should fallback to default value', () => {
