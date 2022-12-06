@@ -1,3 +1,3 @@
-export * from './utilities/index';
-export * from './regex';
-export * from './scope';
+export * from './utilities/index.js';
+export * from './regex.js';
+export * from './scope.js';
