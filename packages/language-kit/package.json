@@ -8,17 +8,16 @@
     "url": "git+https://github.com/logto-io/toolkit.git"
   },
   "license": "MIT",
-  "type": "module",
   "source": "./src/index.ts",
-  "main": "./lib/index.cjs",
-  "exports": "./lib/index.js",
+  "main": "./lib/index.js",
+  "exports": "./lib/index.mjs",
   "types": "./lib/index.d.ts",
   "files": [
     "lib"
   ],
   "scripts": {
     "precommit": "lint-staged",
-    "build": "rm -rf lib/ && rollup -c && tsc -p tsconfig.build.json",
+    "build": "rm -rf lib/ && rollup -c",
     "lint": "eslint --ext .ts src",
     "lint:report": "pnpm lint --format json --output-file report.json",
     "prepack": "pnpm build",

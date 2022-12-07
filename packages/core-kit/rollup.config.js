@@ -11,7 +11,11 @@ const configs = [
         dir: 'lib',
         format: 'cjs',
         preserveModules: true,
-        entryFileNames: '[name].cjs',
+      },
+      {
+        dir: 'lib',
+        preserveModules: true,
+        entryFileNames: '[name].mjs',
       },
     ],
     plugins: [typescript({ tsconfig: 'tsconfig.build.json' })],

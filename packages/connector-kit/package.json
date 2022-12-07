@@ -7,10 +7,9 @@
     "type": "git",
     "url": "git+https://github.com/logto-io/toolkit.git"
   },
-  "type": "module",
   "source": "./src/index.ts",
-  "main": "./lib/index.cjs",
-  "exports": "./lib/index.js",
+  "main": "./lib/index.js",
+  "exports": "./lib/index.mjs",
   "types": "./lib/index.d.ts",
   "files": [
     "lib"
@@ -18,7 +17,7 @@
   "scripts": {
     "precommit": "lint-staged",
     "dev": "tsc --watch --preserveWatchOutput --incremental",
-    "build": "rm -rf lib/ && rollup -c && tsc",
+    "build": "rm -rf lib/ && rollup -c",
     "lint": "eslint --ext .ts src",
     "lint:report": "pnpm lint --format json --output-file report.json",
     "prepack": "pnpm build"
@@ -27,8 +26,8 @@
     "zod": "^3.19.1"
   },
   "dependencies": {
-    "@logto/core-kit": "^1.0.0-beta.28",
-    "@logto/language-kit": "^1.0.0-beta.28",
+    "@logto/core-kit": "1.0.0-beta.28",
+    "@logto/language-kit": "1.0.0-beta.28",
     "@silverhand/essentials": "^1.2.1"
   },
   "devDependencies": {
