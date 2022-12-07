@@ -10,7 +10,12 @@
   "license": "MIT",
   "source": "./src/index.ts",
   "main": "./lib/index.js",
-  "exports": "./lib/index.mjs",
+  "exports": {
+    ".": {
+      "import": "./lib/index.mjs",
+      "types": "./lib/index.d.ts"
+    }
+  },
   "types": "./lib/index.d.ts",
   "files": [
     "lib"
