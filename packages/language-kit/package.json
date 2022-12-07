@@ -11,7 +11,10 @@
   "type": "module",
   "source": "./src/index.ts",
   "main": "./lib/index.cjs",
-  "exports": "./lib/index.js",
+  "exports": {
+    "import": "./lib/index.js",
+    "require": "./lib/index.cjs"
+  },
   "types": "./lib/index.d.ts",
   "files": [
     "lib"

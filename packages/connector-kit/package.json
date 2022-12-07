@@ -7,10 +7,14 @@
     "type": "git",
     "url": "git+https://github.com/logto-io/toolkit.git"
   },
+  "license": "MIT",
   "type": "module",
   "source": "./src/index.ts",
   "main": "./lib/index.cjs",
-  "exports": "./lib/index.js",
+  "exports": {
+    "import": "./lib/index.js",
+    "require": "./lib/index.cjs"
+  },
   "types": "./lib/index.d.ts",
   "files": [
     "lib"
@@ -27,8 +31,8 @@
     "zod": "^3.19.1"
   },
   "dependencies": {
-    "@logto/core-kit": "^1.0.0-beta.28",
-    "@logto/language-kit": "^1.0.0-beta.28",
+    "@logto/core-kit": "1.0.0-beta.28",
+    "@logto/language-kit": "1.0.0-beta.28",
     "@silverhand/essentials": "^1.2.1"
   },
   "devDependencies": {
