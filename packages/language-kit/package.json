@@ -17,7 +17,7 @@
   ],
   "scripts": {
     "precommit": "lint-staged",
-    "build": "rm -rf lib/ && rollup -c",
+    "build": "rm -rf lib/ && rollup -c --bundleConfigAsCjs",
     "lint": "eslint --ext .ts src",
     "lint:report": "pnpm lint --format json --output-file report.json",
     "prepack": "pnpm build",

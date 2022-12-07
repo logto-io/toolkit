@@ -20,7 +20,7 @@
   "scripts": {
     "precommit": "lint-staged",
     "dev": "tsc -p tsconfig.build.json --watch --preserveWatchOutput --incremental",
-    "build": "rm -rf lib/ && rollup -c",
+    "build": "rm -rf lib/ && rollup -c --bundleConfigAsCjs",
     "lint": "eslint --ext .ts src",
     "lint:report": "pnpm lint --format json --output-file report.json",
     "prepack": "pnpm build",
