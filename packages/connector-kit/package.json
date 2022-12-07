@@ -8,7 +8,7 @@
     "url": "git+https://github.com/logto-io/toolkit.git"
   },
   "source": "./src/index.ts",
-  "main": "./lib/index.js",
+  "main": "./lib/index.cjs",
   "exports": {
     ".": {
       "import": "./lib/index.mjs",

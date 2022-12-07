@@ -11,6 +11,7 @@ const configs = [
         dir: 'lib',
         format: 'cjs',
         preserveModules: true,
+        entryFileNames: '[name].cjs',
       },
       {
         dir: 'lib',
